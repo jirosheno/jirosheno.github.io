@@ -1,0 +1,39 @@
+<aside class="card content-sidebar article-sidebar" data-content-sidebar>
+  <section class="sidebar-section">
+    <div class="card-label">ARTICLE</div>
+    <dl class="sidebar-details">
+      <div><dt>Reading time</dt><dd><i data-lucide="clock-3" aria-hidden="true"></i>{{ .Params.readTime | default "5 min read" }}</dd></div>
+      <div><dt>Published</dt><dd><i data-lucide="calendar-days" aria-hidden="true"></i>{{ .Date | time.Format ":date_medium" }}</dd></div>
+      <div><dt>Category</dt><dd>{{ .Params.category | default "ARTICLE / NOTES" }}</dd></div>
+    </dl>
+  </section>
+
+  {{ with .TableOfContents }}
+  <section class="sidebar-section sidebar-toc">
+    <div class="card-label">CONTENTS</div>
+    {{ . }}
+  </section>
+  {{ end }}
+
+  {{ with .Params.tags }}
+  <section class="sidebar-section">
+    <div class="card-label">TAGS</div>
+    <div class="skills-tags sidebar-tags">{{ range . }}<span class="skill-tag"><i data-lucide="tag" aria-hidden="true"></i>{{ . }}</span>{{ end }}</div>
+  </section>
+  {{ end }}
+
+  <section class="sidebar-section sidebar-share">
+    <div class="card-label">SHARE</div>
+    <div class="sidebar-actions">
+      <button type="button" class="sidebar-action" data-copy-link><i data-lucide="copy" aria-hidden="true"></i><span>Copy Link</span></button>
+      <a class="sidebar-action" href="https://twitter.com/intent/tweet?text={{ .Title | urlquery }}&url={{ .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer"><i data-lucide="twitter" aria-hidden="true"></i><span>X / Twitter</span></a>
+      <a class="sidebar-action" href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink | urlquery }}" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+    </div>
+  </section>
+
+  <section class="sidebar-section sidebar-progress">
+    <div class="card-label">CURRENT READING PROGRESS</div>
+    <div class="sidebar-progress-track"><span data-sidebar-progress-bar></span></div>
+    <strong data-sidebar-progress-label>0%</strong>
+  </section>
+</aside>

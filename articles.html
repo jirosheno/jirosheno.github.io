@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles — Jirosheno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="Assets/favicon.jpg" type="image/png">
+
+</head>
+<body>
+
+<!-- Sticky Top Navigation Bar -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="index.html">Jirosheno</a>
+    </div>
+    
+    <!-- Desktop Navigation Links -->
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="articles.html" class="nav-link active">Articles</a>
+      <!-- <a href="now.html" class="nav-link">Now</a>
+      <a href="stack.html" class="nav-link">Stack</a> -->
+      <!-- <a href="contact.html" class="nav-link">Contact</a> -->
+    </div>
+    
+    <!-- Mobile Hamburger Menu Button -->
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+  
+  <!-- Mobile Navigation Dropdown Menu -->
+  <div class="nav-mobile-menu" id="nav-mobile-menu">
+    <a href="index.html" class="nav-mobile-link">Home</a>
+    <a href="projects.html" class="nav-mobile-link">Projects</a>
+    <a href="articles.html" class="nav-mobile-link active">Articles</a>
+    <!-- <a href="now.html" class="nav-mobile-link">Now</a>
+    <a href="stack.html" class="nav-mobile-link">Stack</a> -->
+    <!-- <a href="contact.html" class="nav-mobile-link">Contact</a> -->
+  </div>
+</nav>
+
+<!-- Ambient background glows -->
+<div class="ambient-glows" id="ambient-glows">
+  <div class="glow-blob blob-primary" id="blob-primary"></div>
+  <div class="glow-blob blob-secondary" id="blob-secondary"></div>
+</div>
+
+<!-- Global Mouse-Reactive Glow -->
+<div class="global-mouse-glow" id="global-mouse-glow"></div>
+
+
+
+
+
+<!-- Content Area -->
+<main class="home">
+  <div class="articles-page">
+    <div class="article-standard-grid">
+    <!-- Article 1 -->
+    <section class="card article-card article-list-card">
+      <div class="article-cover" style="background-image: url('Assets/archlinux.png');" aria-hidden="true"></div>
+      <div class="card-num">01</div>
+      <div class="card-label">ARTICLE / OPERATING SYSTEMS</div>
+      <h1 class="article-title">WHY ARCH LINUX?</h1>
+      <div class="article-meta" aria-label="Article publication details">
+        <span><i data-lucide="calendar-days" aria-hidden="true"></i>Mar 04, 2026</span>
+        <span><i data-lucide="clock-3" aria-hidden="true"></i>6 min read</span>
+      </div>
+      <p class="article-dek">A practical field guide to latency budgets, optimistic UI, and the subtle feedback loops that make collaborative products feel alive.</p>
+      <div class="skills-tags article-tags">
+        <span class="skill-tag"><i data-lucide="network" aria-hidden="true"></i>Networking</span>
+        <span class="skill-tag"><i data-lucide="System" aria-hidden="true"></i>Operating systems</span>
+      </div>
+      <div class="card-footer">
+        <a href="articles/article.html" class="card-action-btn">READ ARTICLE <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+      </div>
+    </section>
+
+      <!-- Article 2 -->
+      <!-- <section class="card article-card article-list-card">
+        <div class="article-cover" style="background-image: url('Assets/Doomscrolling.gif');" aria-hidden="true"></div>
+        <div class="card-num">02</div>
+        <div class="card-label">ARTICLE / SECURITY</div>
+        <h2 class="article-title">Doomscrolling</h2>
+        <div class="article-meta" aria-label="Article publication details">
+          <span><i data-lucide="calendar-days" aria-hidden="true"></i>Jun 24, 2026</span>
+          <span><i data-lucide="clock-3" aria-hidden="true"></i>4 min read</span>
+        </div>
+        <p class="article-dek">A concise checklist for keeping prompt inputs, personal data, and model actions inside sensible guardrails.</p>
+        <div class="skills-tags article-tags">
+          <span class="skill-tag"><i data-lucide="shield-check" aria-hidden="true"></i>Security</span>
+          <span class="skill-tag"><i data-lucide="bot" aria-hidden="true"></i>AI</span>
+        </div>
+        <div class="card-footer">
+          <a href="Articles/article.html" class="card-action-btn">READ ARTICLE <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+      </section> -->
+
+
+    
+<!-- <main class="home"><div class="articles-page"><div class="card-label"></div><div class="article-standard-grid">
+  
+  <article class="card article-card">
+   <div class="article-cover" style="background-image: url('{{ . | relURL }}');"></div>
+    <div class="card-label"></div>
+    <h2 class="article-title"></h2>
+    <p class="article-dek"></p>
+    <div class="card-footer"><a href="{{ .RelPermalink }}" class="card-action-btn">OPEN <i data-lucide="arrow-right" aria-hidden="true"></i></a></div>
+  </article>
+  
+</main> -->
+
+      <!-- Article 3 -->
+      <!-- <section class="card article-card article-list-card">
+        <div class="article-cover" style="background-image: url('Assets/article cover.webp');" aria-hidden="true"></div>
+        <div class="card-num">03</div>
+        <div class="card-label">ARTICLE / CREATIVE CODE</div>
+        <h2 class="article-title">Making Data Legible Through Motion</h2>
+        <div class="article-meta" aria-label="Article publication details">
+          <span><i data-lucide="calendar-days" aria-hidden="true"></i>May 30, 2026</span>
+          <span><i data-lucide="clock-3" aria-hidden="true"></i>5 min read</span>
+        </div>
+        <p class="article-dek">How deliberate timing, contrast, and restraint can turn changing data into a story people can actually follow.</p>
+        <div class="skills-tags article-tags">
+          <span class="skill-tag"><i data-lucide="chart-no-axes-combined" aria-hidden="true"></i>Data Viz</span>
+          <span class="skill-tag"><i data-lucide="sparkles" aria-hidden="true"></i>Motion</span>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="card-action-btn">READ ARTICLE <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+      </section> -->
+
+    
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer"><a class="footer-brand" href="index.html">Jirosheno</a><div class="footer-socials"><a href="https://github.com/jirosheno" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i></a><a href="https://twitter.com/jirosheno" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i data-lucide="twitter" aria-hidden="true"></i></a><a href="mailto:hello@jirosheno.dev" aria-label="Email"><i data-lucide="mail" aria-hidden="true"></i></a></div><small>© 2026 Jirosheno</small></footer>
+
+<button class="scroll-to-top" type="button" aria-label="Scroll to top"><i data-lucide="arrow-up" aria-hidden="true"></i></button>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="script.js"></script>
+</body>
+</html>

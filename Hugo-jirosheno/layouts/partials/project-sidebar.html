@@ -1,0 +1,41 @@
+<aside class="card content-sidebar project-sidebar" data-content-sidebar>
+  <section class="sidebar-section">
+    <div class="card-label">PROJECT</div>
+    <dl class="sidebar-details">
+      <div><dt>Status</dt><dd>{{ .Params.status | default "Prototype" }}</dd></div>
+      <div><dt>Role</dt><dd>{{ .Params.role | default "Designer & Developer" }}</dd></div>
+      <div><dt>Timeline</dt><dd><i data-lucide="calendar-days" aria-hidden="true"></i>{{ .Params.timeline | default "In progress" }}</dd></div>
+    </dl>
+  </section>
+
+  {{ with .Params.tech }}
+  <section class="sidebar-section">
+    <div class="card-label">STACK</div>
+    <div class="skills-tags sidebar-tags">{{ range . }}<span class="skill-tag"><i data-lucide="code-2" aria-hidden="true"></i>{{ . }}</span>{{ end }}</div>
+  </section>
+  {{ end }}
+
+  {{ if or .Params.demo .Params.github .Params.documentation }}
+  <section class="sidebar-section">
+    <div class="card-label">LINKS</div>
+    <div class="sidebar-actions">
+      {{ with .Params.demo }}<a class="sidebar-action" href="{{ . }}" target="_blank" rel="noopener noreferrer"><i data-lucide="external-link" aria-hidden="true"></i><span>Live Demo</span></a>{{ end }}
+      {{ with .Params.github }}<a class="sidebar-action" href="{{ . }}" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i><span>GitHub</span></a>{{ end }}
+      {{ with .Params.documentation }}<a class="sidebar-action" href="{{ . }}" target="_blank" rel="noopener noreferrer"><i data-lucide="file-text" aria-hidden="true"></i><span>Documentation</span></a>{{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ with .TableOfContents }}
+  <section class="sidebar-section sidebar-toc">
+    <div class="card-label">CONTENTS</div>
+    {{ . }}
+  </section>
+  {{ end }}
+
+  <section class="sidebar-section sidebar-progress">
+    <div class="card-label">CURRENT PROJECT PROGRESS</div>
+    <div class="sidebar-progress-track"><span data-sidebar-progress-bar></span></div>
+    <strong data-sidebar-progress-label>0%</strong>
+  </section>
+</aside>

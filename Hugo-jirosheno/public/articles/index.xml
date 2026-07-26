@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Articles on Jirosheno</title>
+		<link>http://localhost:1313/articles/</link>
+		<description>Recent content in Articles on Jirosheno</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 23 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/articles/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Doomscrolling</title>
+				<link>http://localhost:1313/articles/doomscrolling/</link>
+				<pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/articles/doomscrolling/</guid>
+				<description>&amp;hellip;</description>
+			</item>
+	</channel>
+</rss>

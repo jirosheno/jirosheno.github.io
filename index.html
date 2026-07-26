@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jirosheno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="Assets/favicon.jpg" type="image/png">
+</head>
+<body>
+
+<!-- One-time intro loader. Only lives on index.html — never included on other pages. -->
+<div id="intro-loader">
+  <canvas id="wave-canvas"></canvas>
+  <div class="vignette"></div>
+  <h1 class="intro-name">
+    <span id="intro-letters" aria-hidden="true"></span>
+    <span class="sr-only">Jirosheno</span>
+  </h1>
+  <p class="skip-hint">click to skip</p>
+</div>
+
+<!-- Sticky Top Navigation Bar -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="index.html">Jirosheno</a>
+    </div>
+    
+    <!-- Desktop Navigation Links -->
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="articles.html" class="nav-link">Articles</a>
+      <!-- <a href="now.html" class="nav-link">Now</a>
+      <a href="stack.html" class="nav-link">Stack</a> -->
+      <!-- <a href="contact.html" class="nav-link">Contact</a> -->
+    </div>
+    
+    <!-- Mobile Hamburger Menu Button -->
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+  
+  <!-- Mobile Navigation Dropdown Menu -->
+  <div class="nav-mobile-menu" id="nav-mobile-menu">
+    <a href="index.html" class="nav-mobile-link active">Home</a>
+    <a href="projects.html" class="nav-mobile-link">Projects</a>
+    <a href="articles.html" class="nav-mobile-link">Articles</a>
+    <!-- <a href="now.html" class="nav-mobile-link">Now</a>
+    <a href="stack.html" class="nav-mobile-link">Stack</a> -->
+    </div>
+</nav>
+
+<!-- Ambient background glows -->
+<div class="ambient-glows" id="ambient-glows">
+  <div class="glow-blob blob-primary" id="blob-primary"></div>
+  <div class="glow-blob blob-secondary" id="blob-secondary"></div>
+</div>
+
+<!-- Global Mouse-Reactive Glow -->
+<div class="global-mouse-glow" id="global-mouse-glow"></div>
+
+<!-- Real home page content lives here, underneath the loader -->
+<main class="home">
+  <div class="home-content">
+  <!-- Card Grid -->
+  <div class="card-grid">
+    <!-- About Section (Left) -->
+    <section class="card card-about">
+      <div class="card-num">01</div>
+      <div class="card-label">ABOUT</div>
+
+      <!-- Profile Image Container (Relocated to Top) -->
+      <div class="profile-image-container">
+        <img class="profile-image" src="Assets/jirosheno.jpg" alt="Profile photo">
+      </div>
+
+      <h1 class="card-heading">Jirosheno</h1>
+      <p class="card-desc">
+      Software Engineering. I enjoy building useful things, learning new technologies, and sharing what I discover along the way. Most of my projects are driven by curiosity, and that's exactly how I like it.      </p>
+
+      <div class="skills-tags">
+        <span class="skill-tag"><i data-lucide="cpu" aria-hidden="true"></i>C</span>
+        <span class="skill-tag"><i data-lucide="box" aria-hidden="true"></i>C++</span>
+        <span class="skill-tag"><i data-lucide="code" aria-hidden="true"></i>Shaders</span>
+        <span class="skill-tag"><i data-lucide="code-2" aria-hidden="true"></i>Creative Dev</span>
+      </div>
+    </section>
+
+    <!-- Projects + AI video stacked (Middle) -->
+    <div class="card-stack">
+      <!-- Projects Card with Slideshow -->
+      <section class="card card-projects slideshow-card">
+        <div class="slides-container">
+          <!-- Slide 1: Generative Fluids -->
+          
+          <div class="project-slide active" style="background-image: linear-gradient(180deg, rgba(13, 16, 23, 0.4), rgba(6, 7, 10, 0.95)), url('Assets/buble.gif');">
+            <div class="slide-overlay-glow"></div>
+            <div class="slide-header">
+              <span class="card-num">02</span>
+              <span class="card-label">PROJECT / AUDIO</span>
+            </div>
+            <h3 class="slide-title">AI Triage System</h3>
+            <p class="slide-desc">Role-based AI triage.</p>
+            <div class="slide-footer">
+              <a href="Projects/project1.html" class="slide-link">VIEW PROJECT &rarr;</a>
+            </div>
+          </div>
+
+          
+          <!-- Slide 2: Spectral Fields -->
+          <div class="project-slide" style="background-image: linear-gradient(180deg, rgba(13, 16, 23, 0.4), rgba(6, 7, 10, 0.95)), url('Assets/archlinux.png');">
+            <div class="slide-overlay-glow"></div>
+            <div class="slide-header">
+              <span class="card-num">02</span>
+              <span class="card-label">ARTICLE / OPERATING SYSTEMS</span>
+            </div>
+            <h3 class="slide-title">WHY ARCH LINUX?</h3>
+            <p class="slide-desc">The reasons why arch linux is the best distro.</p>
+            <div class="slide-footer">
+              <a href="Articles/article.html" class="slide-link">VIEW ARTICLE &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Slide 3: WebGL State Control Article -->
+          <!-- <div class="project-slide" style="background-image: linear-gradient(180deg, rgba(13, 16, 23, 0.4), rgba(6, 7, 10, 0.95)), url('Assets/skull.gif');">
+            <div class="slide-overlay-glow"></div>
+            <div class="slide-header">
+              <span class="card-num">02</span>
+              <span class="card-label">ARTICLE / OPTIMIZATION</span>
+            </div>
+            <h3 class="slide-title">WebGL State Control</h3>
+            <p class="slide-desc">Minimizing memory overhead in rendering loops.</p>
+            <div class="slide-footer">
+              <a href="articles.html" class="slide-link">READ ARTICLE &rarr;</a>
+            </div>
+          </div> -->
+        </div>
+        
+        <!-- Slide dots indicators -->
+        <div class="slide-indicators" aria-label="Slideshow navigation"></div>
+      </section>
+
+      <!-- Live dashboard card -->
+      <section class="card card-dashboard">
+        <div class="card-num">03</div>
+        <div class="card-label">LIVE SNAPSHOT</div>
+        <h2 class="card-heading">Studio Dashboard</h2>
+        <div class="dashboard-stats" aria-label="Portfolio summary">
+          <div class="dashboard-stat"><i data-lucide="folder-kanban" aria-hidden="true"></i><strong data-counter="1">0</strong><span>Projects</span></div>
+          <div class="dashboard-stat"><i data-lucide="book-open" aria-hidden="true"></i><strong data-counter="1">0</strong><span>Articles</span></div>
+          
+           <!-- 🔴🔴🔴🔴🔴🔴🔴🔴 -->
+          <div class="dashboard-stat"><i data-lucide="coffee" aria-hidden="true">
+          </i><strong data-counter="51">0</strong><span>Coffee cups</span></div>
+           <!-- 🔴🔴🔴🔴🔴🔴🔴🔴 -->
+        
+        </div>
+        <div class="dashboard-pulse"><span></span>Building in public</div>
+      </section>
+    </div>
+
+    <!-- Contact Section (Right) -->
+    <section class="card card-contact">
+      <div class="card-num">04</div>
+      <div class="card-label">CONNECT</div>
+      <h2 class="card-heading">Got an idea?</h2>
+      <p class="card-desc">
+        Whether it's a project, a question, or you just want to say hi, my inbox is always open. I'll do my best to get back to you.
+      </p>
+      
+      <div class="contact-links">
+        <a href="mailto:hello@jirosheno.dev" class="contact-link-item">
+          <i class="contact-icon" data-lucide="mail" aria-hidden="true"></i>
+          <span class="contact-content"><span class="contact-platform">EMAIL</span><span class="contact-handle">hello@jirosheno.dev</span></span>
+        </a>
+        <!-- <a href="https://github.com/jirosheno" class="contact-link-item" target="_blank" rel="noopener noreferrer">
+          <i class="contact-icon" data-lucide="code-xml" aria-hidden="true"></i>
+          <span class="contact-content"><span class="contact-platform">GITHUB</span><span class="contact-handle">jirosheno <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></span>
+        </a> -->
+
+        <a href="https://github.com/jirosheno"
+   class="contact-link-item"
+   target="_blank"
+   rel="noopener noreferrer">
+
+    <svg
+        class="contact-icon github-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"/>
+    </svg>
+
+    <span class="contact-content">
+        <span class="contact-platform">GITHUB</span>
+        <span class="contact-handle">
+            jirosheno
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        </span>
+    </span>
+
+</a>
+
+
+
+
+        <a href="https://twitter.com/jirosheno" class="contact-link-item" target="_blank" rel="noopener noreferrer">
+          <i class="contact-icon" data-lucide="twitter" aria-hidden="true"></i>
+          <span class="contact-content"><span class="contact-platform">TWITTER</span><span class="contact-handle">@jirosheno <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></span>
+        </a>
+      </div>
+    </section>
+  </div>
+  <!-- <div class="home-stats" aria-label="Portfolio statistics">
+    <div class="stat-block"><i data-lucide="award" aria-hidden="true"></i><strong>6</strong><span>Certifications</span></div>
+    <div class="stat-block"><i data-lucide="graduation-cap" aria-hidden="true"></i><strong>2</strong><span>Semesters left</span></div>
+    <div class="stat-block"><i data-lucide="layers-3" aria-hidden="true"></i><strong>12</strong><span>Experiments shipped</span></div>
+    <div class="stat-block"><i data-lucide="coffee" aria-hidden="true"></i><strong>∞</strong><span>Ideas in progress</span></div>
+  </div> -->
+  </div>
+</main>
+
+<footer class="site-footer"><a class="footer-brand" href="index.html">Jirosheno</a><div class="footer-socials"><a href="https://github.com/jirosheno" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i></a><a href="https://twitter.com/jirosheno" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i data-lucide="twitter" aria-hidden="true"></i></a><a href="mailto:hello@jirosheno.dev" aria-label="Email"><i data-lucide="mail" aria-hidden="true"></i></a></div><small>© 2026 Jirosheno</small></footer>
+
+<!-- Three.js MUST load before script.js, since script.js uses the THREE global -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<button class="scroll-to-top" type="button" aria-label="Scroll to top"><i data-lucide="arrow-up" aria-hidden="true"></i></button>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

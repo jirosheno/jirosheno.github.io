@@ -1,0 +1,14 @@
+{{ define "main" }}
+<main class="home"><section class="content-detail-layout article-detail-layout"><article class="card article-detail">
+  <header class="article-detail-header">
+    {{ with .Params.cover }}<div class="article-detail-cover" style="background-image: url('{{ . | relURL }}');"></div>{{ end }}
+    <a class="article-back" href="{{ "/articles/" | relURL }}"><i data-lucide="arrow-left" aria-hidden="true"></i>All articles</a>
+    <div class="card-label">{{ .Params.category | default "ARTICLE / NOTES" }}</div>
+    <h1>{{ .Title }}</h1>
+    <div class="article-meta"><span><i data-lucide="calendar-days" aria-hidden="true"></i>{{ .Date | time.Format ":date_medium" }}</span><span><i data-lucide="clock-3" aria-hidden="true"></i>{{ .Params.readTime | default "5 min read" }}</span></div>
+    <p class="article-lede">{{ .Params.summary }}</p>
+    {{ with .Params.tags }}<div class="skills-tags article-tags">{{ range . }}<span class="skill-tag"><i data-lucide="tag" aria-hidden="true"></i>{{ . }}</span>{{ end }}</div>{{ end }}
+  </header>
+  <div class="article-body">{{ .Content }}</div>
+</article>{{ partial "article-sidebar.html" . }}</section></main>
+{{ end }}

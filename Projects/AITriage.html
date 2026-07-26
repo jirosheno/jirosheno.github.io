@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Triage System - Jirosheno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../Assets/favicon.jpg" type="image/png">
+</head>
+<body>
+<nav class="navbar" id="navbar"><div class="nav-container"><div class="nav-logo"><a href="../index.html">Jirosheno</a></div><div class="nav-links" id="nav-links"><a href="../index.html" class="nav-link">Home</a><a href="../projects.html" class="nav-link active">Projects</a><a href="../articles.html" class="nav-link">Articles</a><a href="../contact.html" class="nav-link">Contact</a></div><button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button></div><div class="nav-mobile-menu" id="nav-mobile-menu"><a href="../index.html" class="nav-mobile-link">Home</a><a href="../projects.html" class="nav-mobile-link active">Projects</a><a href="../articles.html" class="nav-mobile-link">Articles</a><a href="../contact.html" class="nav-mobile-link">Contact</a></div></nav>
+<div class="ambient-glows"><div class="glow-blob blob-primary"></div><div class="glow-blob blob-secondary"></div></div>
+<div class="global-mouse-glow" id="global-mouse-glow"></div>
+<div class="reading-progress" aria-hidden="true"><span class="reading-progress-value"></span></div>
+
+<main class="home">
+  <section class="content-detail-layout project-detail-layout">
+    <article class="card project-documentation">
+      <header class="project-documentation-header">
+      <div class="article-detail-cover" style="background-image: url('../Assets/buble.gif');" role="img" aria-label="Animated AI Triage System cover"></div>
+      <a class="article-back" href="../projects.html"><i data-lucide="arrow-left" aria-hidden="true"></i>All projects</a>
+      <div class="card-label">PROJECT / AI SYSTEMS</div>
+      <h1>AI Triage System</h1>
+      <p class="article-lede">Smarter ticket management, powered by roled-based-AI. An AI assisted ticket triage platform built with ASP.NET Core MVC that automatically organizes support requests, manages user roles, and streamlines issue handling through an intuitive interface.</p>
+      <div class="skills-tags article-tags"><span class="skill-tag"><i data-lucide="bot" aria-hidden="true"></i>AI</span><span class="skill-tag"><i data-lucide="shield-check" aria-hidden="true"></i>Safety</span><span class="skill-tag"><i data-lucide="workflow" aria-hidden="true"></i>Automation</span></div>
+      </header>
+      <div class="project-doc-body">
+        <h2 id="overview">Why I built it?</h2><p>AI Triage started as a university project for my Web Development & Framework course. The assignment was to build a complete web application, and while it was intended to be a group project, I chose to take on most of the development myself.</p>
+        <p>At first, it was simply another course requirement. But as the project grew, it became much more than that. It pushed me into areas I hadn't explored before—from authentication and database design to role management and building a structured MVC application.</p>
+        <p>By the end, it wasn't just a project I submitted for a grade; it became one of the experiences that helped me understand how a real web application comes together.</p>
+
+        
+
+        <figure class="showcase reveal">
+
+    <figcaption class="showcase-caption">
+
+        <span class="card-label">
+            FIGURE 01
+        </span>
+
+        <h3>
+            AI Triage Dashboard
+        </h3>
+
+        <p>
+            The main dashboard displaying ticket activity,
+            AI categorization and system status.
+        </p>
+
+    </figcaption>
+
+    <div class="showcase-window">
+
+        <div class="window-bar">
+
+            <div class="window-dots">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <small>
+                ai-triage.local/dashboard
+            </small>
+
+        </div>
+
+        <img
+            src="../Assets/AITriage.png"
+            alt="AI Triage Dashboard">
+
+    </div>
+
+</figure>
+
+
+<section id="tech-stack">
+
+
+    
+
+
+        <section id="features">
+    <div class="card-label"></div>
+    <h2>Features</h2>
+
+  
+        <h3>What can it do?</h3>
+        <p>The system includes everything needed to manage support tickets efficiently.</p>
+        <ul class="article-body">
+          <li>AI-assisted ticket triage</li>
+          <li>Secure authentication</li>
+          <li>Role-based permissions</li>
+          <li>Ticket management</li>
+          <li>Admin dashboard</li>
+          <li>User management</li>
+          <li>SQL server database integration</li>
+          <li>Responsive interface with modren style</li>
+</section>
+
+       
+
+        <section id="how-it-works">
+          <h2>How it works?</h2>
+          <h3>From ticket to solution</h3>
+          <p>Every request follows a simple workflow.</p>
+
+        </section>
+        <div class="ai-pipeline">
+
+    <div class="pipeline-step incoming">
+        <span class="dot"></span>
+        <h4>Incoming Ticket</h4>
+        <p>User submits a new support request.</p>
+    </div>
+
+    <div class="pipeline-line"></div>
+
+    <div class="pipeline-step storage">
+        <span class="dot"></span>
+        <h4>Store Request</h4>
+        <p>The ticket is saved securely in the database.</p>
+    </div>
+
+    <div class="pipeline-line"></div>
+
+    <div class="pipeline-step ai">
+        <span class="dot"></span>
+        <h4>AI Analysis</h4>
+        <p>The AI understands the ticket and extracts useful information.</p>
+    </div>
+
+    <div class="pipeline-line"></div>
+
+    <div class="pipeline-step classify">
+        <span class="dot"></span>
+        <h4>Classification</h4>
+        <p>The request receives a category and priority.</p>
+    </div>
+
+    <div class="pipeline-line"></div>
+
+    <div class="pipeline-step review">
+        <span class="dot"></span>
+        <h4>Human Review</h4>
+        <p>An administrator verifies the AI's decision.</p>
+    </div>
+
+    <div class="pipeline-line"></div>
+
+    <div class="pipeline-step done">
+        <span class="dot"></span>
+        <h4>Assigned</h4>
+        <p>The ticket reaches the correct department.</p>
+    </div>
+
+</div>
+
+
+<section id="techstack">
+ <h2 id="techstack">Technology Stack</h2>
+
+    <p>
+        The technologies used to build the project, from backend logic
+        to authentication and the user interface.
+    </p>
+
+    <div class="stack-grid">
+
+        <div class="stack-card backend">
+
+            <div class="stack-title">
+                <span class="stack-icon">◉</span>
+                <h3>Backend</h3>
+            </div>
+
+            <div class="stack-tags">
+                <span>ASP.NET Core MVC</span>
+                <span>C#</span>
+            </div>
+
+        </div>
+
+        <div class="stack-card database">
+
+            <div class="stack-title">
+                <span class="stack-icon">◉</span>
+                <h3>Database</h3>
+            </div>
+
+            <div class="stack-tags">
+                <span>Microsoft SQL Server</span>
+                <span>Entity Framework Core</span>
+            </div>
+
+        </div>
+
+        <div class="stack-card frontend">
+
+            <div class="stack-title">
+                <span class="stack-icon">◉</span>
+                <h3>Frontend</h3>
+            </div>
+
+            <div class="stack-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+
+        </div>
+
+        <div class="stack-card security">
+
+            <div class="stack-title">
+                <span class="stack-icon">◉</span>
+                <h3>Security</h3>
+            </div>
+
+            <div class="stack-tags">
+                <span>Cookie Authentication</span>
+                <span>Role-Based Authorization</span>
+            </div>
+
+        </div>
+
+    </div>
+    </section>
+
+    <h2>System Architecture</h2>
+    <h3>Project structure</h3>
+    <p>The application follows a clean MVC architecture that separates business logic, data, and presentation.</p>
+    <p>This keeps the codebase easier to maintain and allows new features to be added without affecting the rest of the application.</p>
+    
+
+
+
+    <h2>Authentication</h2>
+    <h3>Secure by design</h3>
+    <p>Security was an important part of the project from the beginning.
+        The application uses cookie-based authentication combined with role-based authorization to control access across the platform.
+        Different users have different permissions, ensuring that administrative actions remain protected.</p>
+    
+
+        <figure class="showcase reveal">
+
+    <figcaption class="showcase-caption">
+
+        <span class="card-label">
+            FIGURE 02
+        </span>
+
+        <h3>
+            Login & Authentication
+        </h3>
+
+        <!-- <p>
+            The main dashboard displaying ticket activity,
+            AI categorization and system status.
+        </p> -->
+
+    </figcaption>
+
+    <div class="showcase-window">
+
+        <div class="window-bar">
+
+            <div class="window-dots">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <small>
+                ai-triage.local/Login Page
+            </small>
+
+        </div>
+
+        <img
+            src="../Assets/AITriageLogin.png"
+            alt="AI Triage Dashboard">
+
+    </div>
+
+</figure>
+
+<h2>Challenges</h2>
+<h3>What I learned?</h3>
+<p>Building the project wasn't just about writing code.
+Some of the biggest challenges included:</p>
+<ul>
+  <li>Designing a scalable ticket workflow.</li>
+  <li>Managing user roles and permissions.</li>
+  <li>Keeping the database synchronized across different development environments.</li>
+  <li>Creating a UI that remained clean while handling large amounts of information.</li>
+</ul>
+<p>Each challenge helped improve both my backend and frontend development skills.</p>
+
+<!-- ______________________________________________________________________________________ -->
+
+<section id="future-improvements">
+
+    <h2>Future Improvements</h2>
+
+    <p class="future-intro">
+        Version 1 is complete, but there are still plenty of ideas worth
+        building. Here's the roadmap for the next updates.
+    </p>
+
+    <div class="future-roadmap">
+
+        <div class="roadmap-item completed">
+
+            <div class="roadmap-status">
+                ✓
+            </div>
+
+            <div class="roadmap-content">
+
+                <h3>AI-powered ticket classification</h3>
+
+                <p>
+                    Current implementation used throughout the project.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-status">
+                ○
+            </div>
+
+            <div class="roadmap-content">
+
+                <h3>Smarter AI predictions</h3>
+
+                <p>
+                    Improve classification accuracy with better prompts and
+                    evaluation methods.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-status">
+                ○
+            </div>
+
+            <div class="roadmap-content">
+
+                <h3>Email notifications</h3>
+
+                <p>
+                    Notify users whenever a ticket is updated or assigned.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-status">
+                ○
+            </div>
+
+            <div class="roadmap-content">
+
+                <h3>Real-time ticket updates</h3>
+
+                <p>
+                    Use SignalR so tickets update instantly without refreshing.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-status">
+                ○
+            </div>
+
+            <div class="roadmap-content">
+
+                <h3>Analytics dashboard</h3>
+
+                <p>
+                    Visualize ticket trends, workload and response times.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-status">
+                ○
+            </div>
+
+            <div class="roadmap-content">
+
+                <h3>File attachments</h3>
+
+                <p>
+                    Allow screenshots and supporting documents with tickets.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-status">
+                ○
+            </div>
+
+            <div class="roadmap-content">
+
+                <h3>Docker deployment</h3>
+
+                <p>
+                    Containerize the application for easier deployment.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-status">
+                ○
+            </div>
+
+            <div class="roadmap-content">
+
+                <h3>Cloud hosting</h3>
+
+                <p>
+                    Deploy the platform to Azure or AWS for public access.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section id="conclusion">
+    <h2>Final Thoughts</h2>
+    <p>AI Triage System was one of my biggest backend projects and gave me practical experience with authentication, database management, ASP.NET Core MVC, and building applications that solve real-world workflow problems.</p>    
+    <p>More importantly, it taught me how different parts of a full-stack application come together to create a complete user experience.</p>  
+    </section>
+  </article>
+    <aside class="card content-sidebar project-sidebar" data-content-sidebar>
+      <section class="sidebar-section"><div class="card-label">PROJECT</div><dl class="sidebar-details"><div><dt>Status</dt><dd>Live</dd></div><div><dt>Role</dt><dd>Designer &amp; Developer</dd></div><div><dt>Timeline</dt><dd><i data-lucide="calendar-days" aria-hidden="true"></i>4 weeks</dd></div></dl></section>
+      <section class="sidebar-section"><div class="card-label">STACK</div><div class="skills-tags sidebar-tags"><span class="skill-tag"><i data-lucide="bot" aria-hidden="true"></i>AI</span><span class="skill-tag"><i data-lucide="workflow" aria-hidden="true"></i>Automation</span><span class="skill-tag"><i data-lucide="shield-check" aria-hidden="true"></i>Safety</span></div></section>
+      <section class="sidebar-section"><div class="card-label">LINKS</div><div class="sidebar-actions"><a class="sidebar-action" href="#"><i data-lucide="external-link" aria-hidden="true"></i><span>Live Demo</span></a><a class="sidebar-action" href="#"><i data-lucide="github" aria-hidden="true"></i><span>GitHub</span></a><a class="sidebar-action" href="#overview"><i data-lucide="file-text" aria-hidden="true"></i><span>Documentation</span></a></div></section>
+      <section class="sidebar-section sidebar-toc"><div class="card-label">CONTENTS</div><nav><ul><li><a href="#overview">Overview</a></li><li><a href="#features">Features</a></li><li><a href="#techstack">Technology Stack</a></li><li><a href="#future-improvements">Future Improvements</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav></section>
+      <section class="sidebar-section sidebar-progress"><div class="card-label">CURRENT PROJECT PROGRESS</div><div class="sidebar-progress-track"><span data-sidebar-progress-bar></span></div><strong data-sidebar-progress-label>0%</strong></section>
+    </aside>
+  </section>
+</main>
+
+<footer class="site-footer"><a class="footer-brand" href="../index.html">Jirosheno</a><div class="footer-socials"><a href="https://github.com/jirosheno" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i></a><a href="https://twitter.com/jirosheno" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i data-lucide="twitter" aria-hidden="true"></i></a><a href="mailto:hello@jirosheno.dev" aria-label="Email"><i data-lucide="mail" aria-hidden="true"></i></a></div><small>© 2026 Jirosheno</small></footer>
+<button class="scroll-to-top" type="button" aria-label="Scroll to top"><i data-lucide="arrow-up" aria-hidden="true"></i></button>
+<script src="https://unpkg.com/lucide@latest"></script><script src="../script.js"></script>
+</body>
+</html>

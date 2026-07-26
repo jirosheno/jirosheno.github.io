@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Jirosheno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Sticky Top Navigation Bar -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="index.html">Jirosheno</a>
+    </div>
+    
+    <!-- Desktop Navigation Links -->
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="articles.html" class="nav-link">Articles</a>
+      <!-- <a href="now.html" class="nav-link">Now</a>
+      <a href="stack.html" class="nav-link">Stack</a> -->
+      <!-- <a href="contact.html" class="nav-link">Contact</a> -->
+    </div>
+    
+    <!-- Mobile Hamburger Menu Button -->
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+  
+  <!-- Mobile Navigation Dropdown Menu -->
+  <div class="nav-mobile-menu" id="nav-mobile-menu">
+    <a href="index.html" class="nav-mobile-link">Home</a>
+    <a href="projects.html" class="nav-mobile-link active">Projects</a>
+    <a href="articles.html" class="nav-mobile-link">Articles</a>
+    <!-- <a href="now.html" class="nav-mobile-link">Now</a>
+    <a href="stack.html" class="nav-mobile-link">Stack</a> -->
+    <!-- <a href="contact.html" class="nav-mobile-link">Contact</a> -->
+  </div>
+</nav>
+
+<!-- Ambient background glows -->
+<div class="ambient-glows" id="ambient-glows">
+  <div class="glow-blob blob-primary" id="blob-primary"></div>
+  <div class="glow-blob blob-secondary" id="blob-secondary"></div>
+</div>
+
+<!-- Global Mouse-Reactive Glow -->
+<div class="global-mouse-glow" id="global-mouse-glow"></div>
+
+<!-- Content Area -->
+<main class="home">
+  <div class="projects-page">
+    <div class="project-filter-bar" aria-label="Filter projects">
+      <button class="project-filter active" type="button" data-filter="all">All</button>
+      <button class="project-filter" type="button" data-filter="ai">AI</button>
+      <button class="project-filter" type="button" data-filter="automation">Automation</button>
+    </div>
+
+  <div class="card-grid project-grid">
+    <!-- Project 1 -->
+    <section class="card project-card" data-categories="ai automation">
+      <!-- Replace this placeholder with the project's real cover image. -->
+      <img class="project-cover" src="Assets/buble.gif" alt="Animated cover for AI Triage System">
+      <span class="project-status status-live"><i data-lucide="circle-check" aria-hidden="true"></i>Live</span>
+      <div class="card-num">01</div>
+      <div class="project-meta" aria-label="Project technologies and date">
+        <span class="project-meta-chip"><i data-lucide="bot" aria-hidden="true"></i>AI</span>
+        <span class="project-meta-chip"><i data-lucide="workflow" aria-hidden="true"></i>Automation</span>
+        <span class="project-meta-chip project-date"><i data-lucide="calendar-days" aria-hidden="true"></i>Jul 2026</span>
+      </div>
+      <h2 class="card-heading">AI Triage System</h2>
+      <p class="card-desc">
+        An explainable intake workflow that helps teams surface urgency, risk, and the next useful question before human review.
+      </p>
+      <div class="card-footer">
+        <a href="Projects/AITriage.html" class="card-action-btn">
+          LAUNCH PROJECT
+          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Project 2 -->
+    <!-- <section class="card project-card" data-categories="three-js audio"> -->
+      
+      
+      <!-- Replace this placeholder with the project's real cover image. -->
+      
+      
+      <!-- <img class="project-cover" src="https://placehold.co/800x450/181522/8f7ce8?text=Spectral+Fields" alt="Placeholder cover for Spectral Fields">
+      <span class="project-status status-archived"><i data-lucide="archive" aria-hidden="true"></i>Archived</span>
+      <div class="card-num">02</div>
+      <div class="project-meta" aria-label="Project technologies and date">
+        <span class="project-meta-chip"><i data-lucide="box" aria-hidden="true"></i>Three.js</span>
+        <span class="project-meta-chip"><i data-lucide="audio-lines" aria-hidden="true"></i>Audio</span>
+        <span class="project-meta-chip project-date"><i data-lucide="calendar-days" aria-hidden="true"></i>Jun 2026</span>
+      </div>
+      <h2 class="card-heading">Spectral Fields</h2>
+      <p class="card-desc">
+        Volumetric particles reacting dynamically to ambient microtonal inputs. Maps pitch frequencies to turbulence vector field displacement.
+      </p>
+      <div class="card-footer">
+        <a href="#" class="card-action-btn">
+          LAUNCH PROJECT
+          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section> -->
+
+    <!-- Project 3 -->
+    <!-- <section class="card project-card" data-categories="canvas-2d interactive">
+      <img class="project-cover" src="https://placehold.co/800x450/111b20/68a8c9?text=Neural+Portals" alt="Placeholder cover for Neural Portals">
+      <span class="project-status status-prototype"><i data-lucide="flask-conical" aria-hidden="true"></i>Prototype</span>
+      <div class="card-num">03</div>
+      <div class="project-meta" aria-label="Project technologies and date">
+        <span class="project-meta-chip"><i data-lucide="code-2" aria-hidden="true"></i>Canvas 2D</span>
+        <span class="project-meta-chip"><i data-lucide="mouse-pointer-2" aria-hidden="true"></i>Interactive</span>
+        <span class="project-meta-chip project-date"><i data-lucide="calendar-days" aria-hidden="true"></i>May 2026</span>
+      </div>
+      <h2 class="card-heading">Neural Portals</h2>
+      <p class="card-desc">
+        An interactive feedback-loop canvas displaying emergent cellular patterns. Reacts in real time to mouse tracking speed and velocity.
+      </p>
+      <div class="card-footer">
+        <a href="#" class="card-action-btn">
+          LAUNCH PROJECT
+          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section> -->
+  </div>
+  </div>
+</main>
+
+<div class="reading-progress" aria-hidden="true"><span class="reading-progress-value"></span></div>
+
+<footer class="site-footer"><a class="footer-brand" href="index.html">Jirosheno</a><div class="footer-socials"><a href="https://github.com/jirosheno" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i></a><a href="https://twitter.com/jirosheno" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i data-lucide="twitter" aria-hidden="true"></i></a><a href="mailto:hello@jirosheno.dev" aria-label="Email"><i data-lucide="mail" aria-hidden="true"></i></a></div><small>© 2026 Jirosheno</small></footer>
+
+<button class="scroll-to-top" type="button" aria-label="Scroll to top"><i data-lucide="arrow-up" aria-hidden="true"></i></button>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="script.js"></script>
+</body>
+</html>

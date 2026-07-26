@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Jirosheno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Localized form styles */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  .form-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-soft);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .form-input, .form-textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 12px;
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(108, 124, 232, 0.03);
+    box-shadow: 0 0 15px rgba(108, 124, 232, 0.1);
+  }
+
+  .form-textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .form-submit-btn {
+    width: 100%;
+    background: var(--accent);
+    color: var(--text);
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .form-submit-btn:hover {
+    background: #5b6bd1;
+    box-shadow: 0 5px 15px rgba(108, 124, 232, 0.3);
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 859px) {
+    .contact-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Sticky Top Navigation Bar -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="index.html">Jirosheno</a>
+    </div>
+    
+    <!-- Desktop Navigation Links -->
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="articles.html" class="nav-link">Articles</a>
+      <!-- <a href="now.html" class="nav-link">Now</a>
+      <a href="stack.html" class="nav-link">Stack</a> -->
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </div>
+    
+    <!-- Mobile Hamburger Menu Button -->
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+  
+  <!-- Mobile Navigation Dropdown Menu -->
+  <div class="nav-mobile-menu" id="nav-mobile-menu">
+    <a href="index.html" class="nav-mobile-link">Home</a>
+    <a href="projects.html" class="nav-mobile-link">Projects</a>
+    <a href="articles.html" class="nav-mobile-link">Articles</a>
+    <!-- <a href="now.html" class="nav-mobile-link">Now</a>
+    <a href="stack.html" class="nav-mobile-link">Stack</a> -->
+    <a href="contact.html" class="nav-mobile-link active">Contact</a>
+  </div>
+</nav>
+
+<!-- Ambient background glows -->
+<div class="ambient-glows" id="ambient-glows">
+  <div class="glow-blob blob-primary" id="blob-primary"></div>
+  <div class="glow-blob blob-secondary" id="blob-secondary"></div>
+</div>
+
+<!-- Global Mouse-Reactive Glow -->
+<div class="global-mouse-glow" id="global-mouse-glow"></div>
+
+<!-- Content Area -->
+<main class="home">
+  <div class="card-grid contact-grid" style="grid-template-columns: 1.2fr 1.8fr; max-width: 960px;">
+    <!-- Column 1: Info -->
+    <section class="card">
+      <div class="card-num">01</div>
+      <div class="card-label">GET IN TOUCH</div>
+      <h2 class="card-heading">Say Hello</h2>
+      <p class="card-desc">
+        Have an idea for an application, a 3D interface, or a project? Drop a message.
+      </p>
+      
+      <div class="contact-links" style="margin-top: auto;">
+        <a href="mailto:hello@jirosheno.dev" class="contact-link-item">
+          <i class="contact-icon" data-lucide="mail" aria-hidden="true"></i>
+          <span class="contact-content"><span class="contact-platform">EMAIL</span><span class="contact-handle">hello@jirosheno.dev</span></span>
+        </a>
+        <a href="https://github.com/jirosheno" class="contact-link-item" target="_blank" rel="noopener noreferrer">
+          <i class="contact-icon" data-lucide="github" aria-hidden="true"></i>
+          <span class="contact-content"><span class="contact-platform">GITHUB</span><span class="contact-handle">github.com/jirosheno <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></span>
+        </a>
+        <a href="https://twitter.com/jirosheno" class="contact-link-item" target="_blank" rel="noopener noreferrer">
+          <i class="contact-icon" data-lucide="twitter" aria-hidden="true"></i>
+          <span class="contact-content"><span class="contact-platform">TWITTER</span><span class="contact-handle">@jirosheno <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Column 2: Form -->
+    <section class="card">
+      <div class="card-num">02</div>
+      <div class="card-label">CONTACT FORM</div>
+      <h2 class="card-heading">Send a Message</h2>
+      
+      <form action="#" method="POST" style="margin-top: 1rem; width: 100%;">
+        <div class="form-group">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" name="name" class="form-input" required placeholder="Enter your name">
+        </div>
+        
+        <div class="form-group">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" id="email" name="email" class="form-input" required placeholder="Enter your email">
+        </div>
+        
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" class="form-textarea" required placeholder="Write your message..."></textarea>
+        </div>
+        
+        <button type="submit" class="form-submit-btn">Send Message</button>
+      </form>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer"><a class="footer-brand" href="index.html">Jirosheno</a><div class="footer-socials"><a href="https://github.com/jirosheno" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i></a><a href="https://twitter.com/jirosheno" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i data-lucide="twitter" aria-hidden="true"></i></a><a href="mailto:hello@jirosheno.dev" aria-label="Email"><i data-lucide="mail" aria-hidden="true"></i></a></div><small>© 2026 Jirosheno</small></footer>
+
+<button class="scroll-to-top" type="button" aria-label="Scroll to top"><i data-lucide="arrow-up" aria-hidden="true"></i></button>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="script.js"></script>
+</body>
+</html>

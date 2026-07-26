@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main class="home"><div class="articles-page"><div class="card-label">{{ .Title }}</div><div class="article-standard-grid">
+  {{ range $index, $page := .Pages }}
+  <article class="card article-card article-list-card">
+    {{ with .Params.cover }}<div class="article-cover" style="background-image: url('{{ . | relURL }}');"></div>{{ end }}
+    <div class="card-num">{{ printf "%02d" (add $index 1) }}</div>
+    <div class="card-label">{{ .Params.category | default .Section }}</div>
+    <h2 class="article-title">{{ .Title }}</h2>
+    <div class="article-meta"><span><i data-lucide="calendar-days" aria-hidden="true"></i>{{ .Date | time.Format ":date_medium" }}</span>{{ with .Params.readTime }}<span><i data-lucide="clock-3" aria-hidden="true"></i>{{ . }}</span>{{ end }}</div>
+    <p class="article-dek">{{ .Params.summary | default .Summary }}</p>
+    <div class="card-footer"><a href="{{ .RelPermalink }}" class="card-action-btn">OPEN <i data-lucide="arrow-right" aria-hidden="true"></i></a></div>
+  </article>
+  {{ end }}
+</div></div></main>
+{{ end }}

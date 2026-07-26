@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main class="home"><section class="content-detail-layout project-detail-layout">
+  <article class="card project-documentation">
+    <header class="project-documentation-header">
+    {{ with .Params.cover }}<div class="article-detail-cover" style="background-image: url('{{ . | relURL }}');"></div>{{ end }}
+    <a class="article-back" href="{{ "/projects/" | relURL }}"><i data-lucide="arrow-left" aria-hidden="true"></i>All projects</a>
+    <div class="card-label">{{ .Params.category | default "PROJECT / EXPERIMENT" }}</div>
+    <h1>{{ .Title }}</h1>
+    <p class="article-lede">{{ .Params.summary }}</p>
+    {{ with .Params.tags }}<div class="skills-tags article-tags">{{ range . }}<span class="skill-tag"><i data-lucide="tag" aria-hidden="true"></i>{{ . }}</span>{{ end }}</div>{{ end }}
+    </header>
+    <div class="project-doc-body">{{ .Content }}</div>
+  </article>
+  {{ partial "project-sidebar.html" . }}
+</section></main>
+{{ end }}

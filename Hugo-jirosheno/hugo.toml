@@ -1,0 +1,8 @@
+baseURL = 'https://jirosheno.dev/'
+locale = 'en-us'
+title = 'Jirosheno'
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+ordered = false

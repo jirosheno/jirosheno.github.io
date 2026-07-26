@@ -1,0 +1,16 @@
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-logo"><a href="{{ "/" | relURL }}">{{ site.Title }}</a></div>
+    <div class="nav-links" id="nav-links">
+      <a href="{{ "/" | relURL }}" class="nav-link">Home</a>
+      <a href="{{ "/projects/" | relURL }}" class="nav-link{{ if eq .Section "projects" }} active{{ end }}">Projects</a>
+      <a href="{{ "/articles/" | relURL }}" class="nav-link{{ if eq .Section "articles" }} active{{ end }}">Articles</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+  </div>
+  <div class="nav-mobile-menu" id="nav-mobile-menu">
+    <a href="{{ "/" | relURL }}" class="nav-mobile-link">Home</a>
+    <a href="{{ "/projects/" | relURL }}" class="nav-mobile-link{{ if eq .Section "projects" }} active{{ end }}">Projects</a>
+    <a href="{{ "/articles/" | relURL }}" class="nav-mobile-link{{ if eq .Section "articles" }} active{{ end }}">Articles</a>
+  </div>
+</nav>
