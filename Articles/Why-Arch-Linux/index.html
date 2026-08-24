@@ -8,7 +8,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../styles.css">
-<link rel="icon" href="../../Assets/faviconog.jpg" type="image/png">
+<link rel="icon" href="../../Assets/faviconog.png" type="image/png">
+<meta
+    name="description"
+    content="The fastest interface is not always the one with the lowest latency. It is the one that gives people a clear sense that their action has been understood">
+  <meta
+    property="og:image"
+    content="https://jirosheno.com/Assets/archlinux.png">
+  <meta name="author" content="Jiro">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
@@ -41,12 +51,53 @@
       <div class="skills-tags article-tags"><span class="skill-tag"><i data-lucide="network" aria-hidden="true"></i>Networking</span><span class="skill-tag"><i data-lucide="terminal" aria-hidden="true"></i>Linux</span></div>
     </header>
 
-    <div class="article-body">
+    
+
+    <div class="article-reader" data-article-reader aria-label="Listen to this article">
+  <div class="reader-header">
+    <div class="reader-info">
+      <span class="reader-icon"><i data-lucide="volume-2" aria-hidden="true"></i></span>
+      <div>
+        <span class="reader-label">LISTEN TO ARTICLE</span>
+        <span class="reader-status" data-reader-status>Ready to read</span>
+      </div>
+    </div>
+
+    <button class="reader-play" type="button" data-reader-play aria-label="Play article">
+      <i data-lucide="play" data-reader-icon aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="reader-progress">
+    <span data-reader-current>0:00</span>
+
+    <input
+      type="range"
+      data-reader-progress
+      min="0"
+      max="100"
+      value="0"
+      step="1"
+    >
+
+    <span data-reader-duration>--:--</span>
+  </div>
+
+  <div class="reader-controls">
+    <button data-speed="0.75">0.75×</button>
+    <button data-speed="1" class="active">1×</button>
+    <button data-speed="1.25">1.25×</button>
+    <button data-speed="1.5">1.5×</button>
+    <button data-speed="2">2×</button>
+  </div>
+</div>
+
+    <div class="article-body" data-audio-src="../../Assets/ArchArticleReader.mp3">
       <section id="why">
       <h2 id="why">What-Why Arch Specifically 💙?</h2>
       <p>Hey there! If you’re diving into the world of Linux, you’ve probably heard of Arch Linux It’s pretty popular among tech enthusiasts, and for good reason. Let’s break down here in this article by explaining what it is and why you might want to give it a shot.</p>
       <p>Arch Linux operates on a rolling release model. what I mean is imagine never having to wait for a new version to get the latest features and updates. Instead of the typical major upgrades, you receive continuous updates, so your system is always current It allows you to stay on the cutting edge without the hassle of reinstalling everything.</p>
-      <p>One of the key philosophies behind Arch is KISS 💋, which stands for Keep It Simple, Stupid. This doesn’t mean it’s basic; rather, it’s about being straightforward. Arch provides a clean slate for you to build your ideal environment. There’s no unnecessary software bogging you down only just what you need.</p>
+      <p>One of the key philosophies behind Arch is KISS 💋, which stands for Keep It Simple Stupid. This doesn’t mean it’s basic rather, it’s about being straightforward. Arch provides a clean slate for you to build your ideal environment. There’s no unnecessary software bogging you down only just what you need.</p>
         </section>
       
         <section id="what">
@@ -60,8 +111,9 @@
       
       <section id="conclusion">
         <h2>Conclusion</h2>
-        <p>In conclusion, if you’re ready to step beyond the typical user-friendly distributions and dive into something more hands-on, Arch Linux could be the perfect fit. Yes, it might take a little time to get accustomed to, but the control and freedom you gain make it worthwhile. If you have any specific areas you want to explore further or need tips for starting, feel free to ask!</p>
+        <p>In conclusion, if you’re ready to step beyond the typical user-friendly distributions and dive into something more hands-on, Arch Linux could be the perfect fit. Yes, it might take a little time to get accustomed to, but the control and freedom you gain make it worthwhile.</p>
       </section>
+    </div>
   </article>
   <aside class="card content-sidebar article-sidebar" data-content-sidebar>
     <section class="sidebar-section"><div class="card-label">ARTICLE</div><dl class="sidebar-details"><div><dt>Reading time</dt><dd><i data-lucide="clock-3" aria-hidden="true"></i>3 min read</dd></div><div><dt>Published</dt><dd><i data-lucide="calendar-days" aria-hidden="true"></i>Mar 04, 2026</dd></div><div><dt>Category</dt><dd>ARTICLE / OPERATING SYSTEMS</dd></div></dl></section>
@@ -75,6 +127,6 @@
 
 <footer class="site-footer"><a class="footer-brand" href="../">Jirosheno</a><div class="footer-socials"><a href="https://github.com/jirosheno" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i></a><a href="https://twitter.com/jirosheno" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i data-lucide="twitter" aria-hidden="true"></i></a><a href="mailto:x@jirosheno.com" aria-label="Email"><i data-lucide="mail" aria-hidden="true"></i></a></div><small>© 2026 Jirosheno</small></footer>
 <button class="scroll-to-top" type="button" aria-label="Scroll to top"><i data-lucide="arrow-up" aria-hidden="true"></i></button>
-<script src="https://unpkg.com/lucide@latest"></script><script src="../../script.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script><script src="../../script.js"></script><script src="../../reader.js" defer></script>
 </body>
 </html>

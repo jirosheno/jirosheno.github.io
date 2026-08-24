@@ -182,23 +182,9 @@ function runIntro() {
 
 // ---- Projects Slideshow Controller ----
 (function() {
-  const slideshow = document.querySelector('.slideshow-card');
-  if (!slideshow) return;
-
-  const slides = Array.from(slideshow.querySelectorAll('.project-slide'));
-  const indicators = slideshow.querySelector('.slide-indicators');
-  if (!slides.length || !indicators) return;
-
-  indicators.replaceChildren();
-  const dots = slides.map((_, index) => {
-    const dot = document.createElement('button');
-    dot.type = 'button';
-    dot.className = 'slide-dot';
-    dot.setAttribute('aria-label', `Show slide ${index + 1}`);
-    dot.dataset.index = String(index);
-    indicators.appendChild(dot);
-    return dot;
-  });
+  const slides = document.querySelectorAll('.project-slide');
+  const dots = document.querySelectorAll('.slide-dot');
+  if (slides.length === 0) return;
 
   let currentIndex = 0;
   let slideInterval = null;
@@ -248,8 +234,7 @@ function runIntro() {
     });
   });
 
-  // Always establish the first visible slide and matching indicator before autoplay.
-  showSlide(0);
+  // Start the slideshow auto-rotation
   startInterval();
 })();
 
@@ -400,20 +385,6 @@ function runIntro() {
       } catch {
         window.prompt('Copy this link:', window.location.href);
       }
-
-
-// -------------------------------------------------------------------------------------------------------------------------
-     
-
-// -------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-     
-
     });
   });
 })();

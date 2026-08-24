@@ -9,6 +9,7 @@
     <p class="article-lede">{{ .Params.summary }}</p>
     {{ with .Params.tags }}<div class="skills-tags article-tags">{{ range . }}<span class="skill-tag"><i data-lucide="tag" aria-hidden="true"></i>{{ . }}</span>{{ end }}</div>{{ end }}
   </header>
-  <div class="article-body">{{ .Content }}</div>
+  {{ with .Params.audio }}{{ partial "article-reader.html" $ }}{{ end }}
+  <div class="article-body"{{ with .Params.audio }} data-audio-src="{{ . | relURL }}"{{ end }}>{{ .Content }}</div>
 </article>{{ partial "article-sidebar.html" . }}</section></main>
 {{ end }}

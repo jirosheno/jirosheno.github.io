@@ -19,5 +19,6 @@
   <button class="scroll-to-top" type="button" aria-label="Scroll to top"><i data-lucide="arrow-up" aria-hidden="true"></i></button>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="{{ "script.js" | relURL }}"></script>
+  {{ if eq .Section "articles" }}<script src="{{ "reader.js" | relURL }}"></script>{{ end }}
 </body>
 </html>

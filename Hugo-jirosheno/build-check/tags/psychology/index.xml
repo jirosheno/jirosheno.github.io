@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Psychology on Jirosheno</title>
+		<link>https://jirosheno.dev/tags/psychology/</link>
+		<description>Recent content in Psychology on Jirosheno</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 23 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://jirosheno.dev/tags/psychology/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Doomscrolling</title>
+				<link>https://jirosheno.dev/articles/doomscrolling/</link>
+				<pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://jirosheno.dev/articles/doomscrolling/</guid>
+				<description>&amp;hellip;</description>
+			</item>
+	</channel>
+</rss>
