@@ -713,7 +713,7 @@
   .article-back:hover { color: var(--text); }
   .article-back svg { width: 15px; height: 15px; stroke-width: 1.8; }
 
-  .article-detail h1 {
+  /* .article-detail h1 {
     font-family: 'Unbounded', sans-serif;
     font-size: clamp(1rem, 3.2vw, 2.6rem);
     font-weight: 700;
@@ -722,7 +722,18 @@
     letter-spacing: -0.035em;
     max-width: 17ch;
     margin-bottom: 1rem;
-  }
+  } */
+
+
+  .article-detail h1 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.13;
+  letter-spacing: -0.035em;
+  max-width: 17ch;
+  margin-bottom: 1rem;
+}
 
   /* .article-lede {
     max-width: 65ch;
