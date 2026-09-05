@@ -318,7 +318,9 @@ function runIntro() {
   const progressBars = document.querySelectorAll('.reading-progress-value');
   const panelBar = document.querySelector('[data-progress-bar]');
   const panelLabel = document.querySelector('[data-progress-label]');
-  if (!progressBars.length && !panelBar) return;
+  const sidebarBars = document.querySelectorAll('[data-sidebar-progress-bar]');
+  const sidebarLabels = document.querySelectorAll('[data-sidebar-progress-label]');
+  if (!progressBars.length && !panelBar && !sidebarBars.length) return;
 
   function updateReadingProgress() {
     const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -327,9 +329,62 @@ function runIntro() {
     progressBars.forEach((bar) => { bar.style.height = value; });
     if (panelBar) panelBar.style.width = value;
     if (panelLabel) panelLabel.textContent = `${Math.round(percentage)}%`;
+    sidebarBars.forEach((bar) => { bar.style.width = value; });
+    sidebarLabels.forEach((label) => { label.textContent = `${Math.round(percentage)}%`; });
   }
 
   window.addEventListener('scroll', updateReadingProgress, { passive: true });
   window.addEventListener('resize', updateReadingProgress);
   updateReadingProgress();
+})();
+
+// ---- Content sidebar navigation and sharing ----
+(function() {
+  const sidebars = document.querySelectorAll('[data-content-sidebar]');
+  if (!sidebars.length) return;
+
+  const tocLinks = Array.from(document.querySelectorAll('.sidebar-toc a[href^="#"]'));
+  const sections = tocLinks
+    .map((link) => ({ link, heading: document.getElementById(decodeURIComponent(link.getAttribute('href').slice(1))) }))
+    .filter((item) => item.heading);
+
+  tocLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const heading = document.getElementById(decodeURIComponent(link.getAttribute('href').slice(1)));
+      if (!heading) return;
+      event.preventDefault();
+      heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', link.getAttribute('href'));
+    });
+  });
+
+  function setActiveLink(activeHeading) {
+    sections.forEach(({ link, heading }) => link.classList.toggle('is-active', heading === activeHeading));
+  }
+
+  if (sections.length && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      if (visible.length) setActiveLink(visible[0].target);
+    }, { rootMargin: '-18% 0px -68% 0px', threshold: 0 });
+    sections.forEach(({ heading }) => observer.observe(heading));
+  } else if (sections.length) {
+    setActiveLink(sections[0].heading);
+  }
+
+  document.querySelectorAll('[data-copy-link]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const original = button.querySelector('span')?.textContent || 'Copy Link';
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        const label = button.querySelector('span');
+        if (label) label.textContent = 'Copied';
+        setTimeout(() => { if (label) label.textContent = original; }, 1600);
+      } catch {
+        window.prompt('Copy this link:', window.location.href);
+      }
+    });
+  });
 })();

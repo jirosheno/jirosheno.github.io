@@ -412,6 +412,59 @@ function runIntro() {
 
 
 
+  (() => {
+    const lightbox = document.querySelector("[data-obsidian-lightbox]");
+    const lightboxImage = lightbox?.querySelector(".obsidian-lightbox-image");
+    const closeButton = lightbox?.querySelector(".obsidian-lightbox-close");
+    const imageButtons = document.querySelectorAll("[data-lightbox-image]");
+
+    if (!lightbox || !lightboxImage || !closeButton) return;
+
+    function openLightbox(src, alt) {
+      lightboxImage.src = src;
+      lightboxImage.alt = alt || "Obsidian vault image";
+
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("is-open");
+      lightbox.setAttribute("aria-hidden", "true");
+
+      document.body.style.overflow = "";
+
+      setTimeout(() => {
+        lightboxImage.src = "";
+      }, 300);
+    }
+
+    imageButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const src = button.dataset.lightboxImage;
+        const image = button.querySelector("img");
+
+        openLightbox(src, image?.alt);
+      });
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+    });
+  })();
+
      
 
     });

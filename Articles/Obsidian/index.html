@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obsidian - Jirosheno</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/style2.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-logo"><a href="/">Jirosheno</a></div>
+    <div class="nav-links" id="nav-links">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/projects/" class="nav-link">Projects</a>
+      <a href="/articles/" class="nav-link active">Articles</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+  </div>
+  <div class="nav-mobile-menu" id="nav-mobile-menu">
+    <a href="/" class="nav-mobile-link">Home</a>
+    <a href="/projects/" class="nav-mobile-link">Projects</a>
+    <a href="/articles/" class="nav-mobile-link active">Articles</a>
+  </div>
+</nav>
+
+  <div class="ambient-glows"><div class="glow-blob blob-primary"></div><div class="glow-blob blob-secondary"></div></div>
+  <div class="global-mouse-glow" id="global-mouse-glow"></div>
+  <div class="reading-progress" aria-hidden="true"><span class="reading-progress-value"></span></div>
+  
+<main class="home"><section class="content-detail-layout article-detail-layout"><article class="card article-detail">
+  <header class="article-detail-header">
+    <div class="article-detail-cover" style="background-image: url('/Assets/Obsidian.png');"></div>
+    <a class="article-back" href="/articles/"><i data-lucide="arrow-left" aria-hidden="true"></i>All articles</a>
+    <div class="card-label">ARTICLE / PKM</div>
+    <h1>Obsidian</h1>
+    <div class="article-meta"><span><i data-lucide="calendar-days" aria-hidden="true"></i>Sep 5, 2026</span><span><i data-lucide="clock-3" aria-hidden="true"></i>6 min read</span></div>
+    <p class="article-lede">My one-year journey from journaling to building a personal knowledge system with Obsidian, exploring digital ownership, privacy, plugins, customization, and the lessons I learned along the way.</p>
+    <div class="skills-tags article-tags">
+          <span class="skill-tag"><i data-lucide="gem" aria-hidden="true"></i>Obsidian</span>
+        <span class="skill-tag"><i data-lucide="lock" aria-hidden="true"></i>Privacy</span>
+        <span class="skill-tag"><i data-lucide="brain" aria-hidden="true"></i>PKM</span>
+        <span class="skill-tag"><i data-lucide="notebook-pen" aria-hidden="true"></i>Note Taking</span>
+        <!-- <span class="skill-tag"><i data-lucide="tag" aria-hidden="true"></i>Privacy</span><span class="skill-tag"><i data-lucide="tag" aria-hidden="true"></i>PKM</span><span class="skill-tag"><i data-lucide="tag" aria-hidden="true"></i>Note Taking</span></div> -->
+  </header>
+  <section class="article-reader" data-article-reader aria-label="Listen to this article">
+  <div class="reader-wave" data-reader-wave aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="reader-content">
+    <div class="reader-header">
+      <div class="reader-info">
+        <span class="reader-icon"><i data-lucide="volume-2" aria-hidden="true"></i></span>
+        <div><span class="reader-label">LISTEN TO ARTICLE</span><span class="reader-status" data-reader-status>Ready to play</span></div>
+      </div>
+      <div class="reader-actions">
+        <button class="reader-mute" type="button" data-reader-mute aria-label="Mute audio"><i data-lucide="volume-2" aria-hidden="true"></i></button>
+        <button class="reader-play" type="button" data-reader-play aria-label="Play article audio"><i data-lucide="play" aria-hidden="true"></i></button>
+      </div>
+    </div>
+    <div class="reader-progress">
+      <span data-reader-current>0:00</span>
+      <input type="range" data-reader-progress min="0" max="100" value="0" step="0.1" aria-label="Audio progress">
+      <span data-reader-remaining>-0:00</span>
+    </div>
+    <div class="reader-time-info">
+      <!-- <span><span class="reader-time-label">ELAPSED</span><span data-reader-elapsed>0:00</span></span> -->
+      <span class="reader-time-separator"></span>
+      <!-- <span><span class="reader-time-label">TOTAL</span><span data-reader-duration>--:--</span></span> -->
+      <!-- <span><span class="reader-time-label">REMAINING</span><span data-reader-remaining-bottom>-0:00</span></span> -->
+    </div>
+    <div class="reader-controls" aria-label="Playback speed">
+      <button type="button" data-speed="0.75">0.75×</button><button type="button" data-speed="1" class="active">1×</button><button type="button" data-speed="1.25">1.25×</button><button type="button" data-speed="1.5">1.5×</button><button type="button" data-speed="2">2×</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<div class="article-body" data-audio-src="../../Assets/ObsidianReader.mp3">
+
+
+
+<div class="article-body" data-audio-src="../../Assets/ObsidianReader.mp3">
+
+  <section id="journey">
+    <h2>From Journaling to PKM: My Journey to Digital Ownership</h2>
+
+    <p>
+      12 years ago I started having the desire to write and note every <strong>significant moment</strong> happening in my life. I wrote about my day, my dreams, and even stories from my imagination. As I grew up, I started getting interested in <strong>Computer Science, art, and creative hobbies</strong>. I would write about them and study them deeply.
+    </p>
+
+    <p>
+      3 years ago I started using Notion. It was pretty good, though not always that functional for my workflow, and it needed a Pro subscription to unlock the premium features. But I still remember the joy I had using it and the work I've done on it, especially how much it helped me manage my things using Notion notes.
+    </p>
+  </section>
+
+
+  <section id="why-switch">
+    <h2>Why I Switched: My Linux Era and Data Control</h2>
+
+    <p>
+      The first time I started using Obsidian was very special to me, but things changed when I got interested in Linux, particularly when I started using Arch Linux a year ago. The reason is simple: Obsidian is substantially more secure and private than Notion. For me, when I started using Arch, having full control over my data and privacy became an important <strong>priority</strong> for me.
+    </p>
+  </section>
+
+
+  <section id="security">
+    <h2>Does Obsidian Offer Better Security?</h2>
+
+    <p>
+      The answer would be a big <strong>YES</strong>, and that's because it offers three main things:
+    </p>
+
+    <ul>
+      <li><strong>Zero-Trust Storage Model</strong></li>
+      <li><strong>True E2EE (End-to-End Encryption)</strong></li>
+      <li><strong>No Vendor Lock-in or AI Scraping Concerns</strong></li>
+    </ul>
+
+    <p>
+      Well, to explain these points and make them clear:
+    </p>
+
+    <p>
+      <strong>Zero-Trust Storage Model:</strong> Obsidian stores everything locally on your filesystem. Unlike Notion, which holds the keys to your data on AWS servers, there is less reliance on a centralized server to access your notes. This means that if a service suffers a server breach or an employee goes rogue, your local vault itself isn't sitting on their servers waiting to be accessed.
+    </p>
+
+    <p>
+      <strong>True E2EE:</strong> It works like this: if you choose to sync across devices, Obsidian Sync uses client-side <mark> AES-256 E2EE </mark>. This means even Obsidian's own developers cannot decrypt your vault contents. On the other hand, Notion doesn't offer zero-knowledge E2EE.
+    </p>
+
+    <p>
+      <strong>No AI Scraping Concerns:</strong> And that's simply because Obsidian notes are just <mark> <code>.md</code> </mark> files. Well, what does that mean? It means that you can read, parse, or move them using core Unix utilities such as<mark> <code>grep</code>, <code>awk</code>, <code>find</code>, or <code>git</code></mark>.
+    </p>
+
+    <p>
+      Because your notes are ordinary Markdown files, you can search through thousands of notes using simple commands, write scripts to process your own data, track changes with Git, move your entire knowledge base to another application, or simply open the files with a text editor. Your notes aren't trapped inside some special database format that only one company understands.
+    </p>
+  </section>
+
+
+  <section id="how-it-works">
+    <h2>How Obsidian Works</h2>
+
+    <p>
+      As we talked about, Obsidian is a system built around local plain-text Markdown notes, which is the best feature in my opinion. It means you own your files completely and they sit in a standard folder on your drive. If Obsidian disappeared tomorrow, your notes would still be fully readable by any simple text reader.
+    </p>
+
+    <p>
+      Obsidian also turns your knowledge base into an interconnected network:
+    </p>
+
+    <figure class="article-image">
+      <img
+        src="../../Assets/connected-nodes.png"
+        alt="Picture of Obsidian connecting 2 files to a sub point"
+        loading="lazy"
+      >
+      <figcaption>Obsidian connecting 2 files to a sub point</figcaption>
+    </figure>
+
+    <p>
+      The primary components are:
+    </p>
+
+    <ul class="ul">
+      <li>
+        <strong>Markdown Notes:</strong> Clean, plain-text formatting that keeps your writing future-proof, fast, and easily portable.
+      </li>
+
+      <li>
+        <strong>Local Files:</strong> Your data remains entirely in your hands, stored on your hard drive, fully functional offline, and secured by your own system.
+      </li>
+
+      <li>
+        <strong>Links Between Notes:</strong> This is so unique in my opinion because you can connect files to each other and maintain relationships between files that share the same content or context.
+      </li>
+
+      <li>
+        <strong>Other Components:</strong> We still have other components such as Backlinks, Graph View, which is my favourite, Tags, Properties, Plugins, and Themes.
+      </li>
+    </ul>
+  </section>
+
+
+  <section id="plugins">
+    <h2>Plugins I Use</h2>
+
+    <p>
+      <strong>Excalidraw:</strong> The best one in my opinion. As a Computer Science student, it helps me a lot with my system designs. If I have a project I am working on, I can use it to design the whole system of the project and also bring ideas to life by sketching them.
+    </p>
+
+    <p>
+      <strong>Iconize:</strong> It's perfect for designing and adding icons to anything in Obsidian, including files, folders, and text.
+    </p>
+
+    <p>
+      <strong>Emoji Shortcut:</strong> As I am writing, sometimes I would love to add an emoji, but I can't go through a browser and search for it. This plugin makes the process of finding an emoji quick by writing <mark><code>:Emojiname</code></mark>, which saves a lot of time.
+    </p>
+
+    <p>
+      I also use Ninja Cursor, Pretty Properties, Dataview, and a few others to keep my workspace interactive.
+    </p>
+  </section>
+
+
+  <section id="styling">
+    <h2>My Minimalist Approach to Styling Obsidian</h2>
+
+    <p>
+      Personally, I use custom themes and careful design choices, as I don't use custom CSS to avoid complexity and make things as simple as possible. Over the last year, here is how I styled my Obsidian vault and made it beautiful.
+    </p>
+
+    <div class="obsidian-vault-comparison">
+
+  <div class="obsidian-vault-image">
+    <button
+      class="obsidian-image-button"
+      type="button"
+      data-lightbox-image="../../Assets/obsidian-old.jpg"
+      aria-label="Open first Obsidian vault image"
+    >
+      <img
+        src="../../Assets/obsidian-old.jpg"
+        alt="First Obsidian vault"
+        loading="lazy"
+      >
+      <span class="obsidian-image-label">OLD</span>
+    </button>
+  </div>
+
+  <div class="obsidian-comparison-divider">
+    <span class="obsidian-light-beam"></span>
+    <span class="obsidian-comparison-arrow">↓</span>
+  </div>
+
+  <div class="obsidian-vault-image">
+    <button
+      class="obsidian-image-button"
+      type="button"
+      data-lightbox-image="../../Assets/obsidian-now.png"
+      aria-label="Open current Obsidian vault image"
+    >
+      <img
+        src="../../Assets/obsidian-now.png"
+        alt="Current Obsidian vault"
+        loading="lazy"
+      >
+      <span class="obsidian-image-label">NOW</span>
+    </button>
+  </div>
+
+</div>
+  </section>
+
+
+  <section id="second-brain">
+    <h2>One Year of Building My Second Brain</h2>
+
+    <p>
+      Using Obsidian for one year was like building a second brain brick by brick until the whole picture suddenly clicked.
+    </p>
+
+    <p>
+      I remember the nights I stayed up noting and studying with Obsidian, and the mornings at university using Obsidian to take notes for my Database and Neural Network classes. Everything I create has a place in my Obsidian vault. The projects, the ideas, even the future plans. Everything related to my self-improvement should be noted and studied, and Obsidian is the right place for that.
+    </p>
+  </section>
+
+
+  <section id="mistake">
+    <h2>The Mistake That Taught Me the Most</h2>
+
+    <p>
+      I had a different vault that was holding the notes for one of my projects. One day, while I was saving and moving data around, I accidentally deleted the whole vault, and that was heartbreaking. But I didn't give up on using Obsidian. That mistake happened because I didn't know much about how to sync my vault, update new notes, and protect it from getting destroyed.
+    </p>
+
+    <p>
+      So I would say before you dive deep into Obsidian, learn how to use it safely. I have a special technique for learning new things that I used when learning Obsidian, which is to make a test environment and do anything you can do in it. Play with buttons, settings, and plugins instead of doing it in your original vault. This way, you will learn a lot and prevent your original vault from getting destroyed like what happened to me.
+    </p>
+
+    <blockquote>
+      💡 <strong>A Quick Note</strong>
+      <br>
+      Now at this point I can say Obsidian is not a note-taking app anymore for me. It has become a lifestyle, a hobby, and my favourite daily space.
+    </blockquote>
+  </section>
+
+
+  <section id="conclusion">
+    <h2>Is Obsidian Really Worth It?</h2>
+
+    <p>
+      The answer would definitely be yes, and the reason will be: read my article to know. My article may not cover all the features of Obsidian, and there are also some things I didn't go into, but if you care about security and securing your valuable data, Obsidian is worth it.
+    </p>
+
+    <p>
+      Obsidian is going to be your personal space to express your feelings, note your projects, study your topics, or even plan for your future. This whole article was also written in my Obsidian vault, and I loved being able to share it on my articles page.
+    </p>
+
+    <p>
+      Obsidian might not be the right choice for you if you just want extremely simple notes and don't care about linking. If you are someone who hates customization and loves simplicity, Obsidian isn't the right choice for you.
+    </p>
+  </section>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- raw HTML omitted -->
+</div>
+</article><aside class="card content-sidebar article-sidebar" data-content-sidebar>
+  <section class="sidebar-section">
+    <div class="card-label">ARTICLE</div>
+    <dl class="sidebar-details">
+      <div><dt>Reading time</dt><dd><i data-lucide="clock-3" aria-hidden="true"></i>6 min read</dd></div>
+      <div><dt>Published</dt><dd><i data-lucide="calendar-days" aria-hidden="true"></i>Sep 5, 2026</dd></div>
+      <div><dt>Category</dt><dd>ARTICLE / PKM</dd></div>
+    </dl>
+  </section>
+
+  
+  <section class="sidebar-section sidebar-toc">
+    <!-- <div class="card-label">CONTENTS</div> -->
+         <section class="sidebar-section sidebar-toc"><div class="card-label">CONTENTS</div><nav><ul>
+        <li><a href="#journey">From Journaling to pkm</a></li>
+        <li><a href="#why-switch">What makes Arch really appealing?</a></li> 
+        <li><a href="#security">Security</a></li>
+        <li><a href="#how-it-works">how it works</a></li>
+        <li><a href="#plugins">Plugins i use</a></li>
+        <li><a href="#styling">styling</a></li>
+        <li><a href="second-brain">second brain</a></li>
+        <li><a href="#mistake">mistake</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#"></a></li></ul></nav></section>
+
+    <nav id="TableOfContents"></nav>
+  </section>
+  
+
+  
+  <section class="sidebar-section">
+    <div class="card-label">TAGS</div>
+    <div class="skills-tags sidebar-tags">
+      <span class="skill-tag"><i data-lucide="gem" aria-hidden="true"></i>Obsidian</span>
+        <span class="skill-tag"><i data-lucide="lock" aria-hidden="true"></i>Privacy</span>
+        <span class="skill-tag"><i data-lucide="brain" aria-hidden="true"></i>PKM</span>
+        <span class="skill-tag"><i data-lucide="notebook-pen" aria-hidden="true"></i>Note Taking</span>
+    </div>
+    <!-- <div class="skills-tags sidebar-tags"><span class="skill-tag"><i data-lucide="tag" aria-hidden="true"></i>Networking</span><span class="skill-tag"><i data-lucide="tag" aria-hidden="true"></i>Performance</span></div> -->
+  </section>
+  
+
+  <!-- <section class="sidebar-section sidebar-share">
+    <div class="card-label">SHARE</div>
+    <div class="sidebar-actions">
+      <button type="button" class="sidebar-action" data-copy-link><i data-lucide="copy" aria-hidden="true"></i><span>Copy Link</span></button>
+      <a class="sidebar-action" href="https://twitter.com/intent/tweet?text=Obsidian&url=http%3A%2F%2Flocalhost%3A1313%2Farticles%2Fobsidian%2F" target="_blank" rel="noopener noreferrer"><i data-lucide="twitter" aria-hidden="true"></i><span>X / Twitter</span></a>
+      <a class="sidebar-action" href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Flocalhost%3A1313%2Farticles%2Fobsidian%2F" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+    </div>
+  </section> -->
+
+  <section class="sidebar-section sidebar-progress">
+    <div class="card-label">CURRENT READING PROGRESS</div>
+    <div class="sidebar-progress-track"><span data-sidebar-progress-bar></span></div>
+    <strong data-sidebar-progress-label>0%</strong>
+  </section>
+</aside>
+</section></main>
+
+  <footer class="site-footer">
+  <a class="footer-brand" href="/">Jirosheno</a>
+  <div class="footer-socials"><a href="https://github.com/jirosheno" aria-label="GitHub"><i data-lucide="github" aria-hidden="true"></i></a><a href="mailto:x@jirosheno.com" aria-label="Email"><i data-lucide="mail" aria-hidden="true"></i></a></div>
+  <small>&copy; 2026 Jirosheno</small>
+</footer>
+
+  <button class="scroll-to-top" type="button" aria-label="Scroll to top"><i data-lucide="arrow-up" aria-hidden="true"></i></button>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="/script.js"></script>
+  <script src="/reader.js"></script>
+</body>
+</html>

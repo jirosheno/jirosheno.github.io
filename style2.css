@@ -1,0 +1,30 @@
+mark {
+  background: transparent;
+  position: relative;
+  display: inline-block;
+  padding: 0 4px;
+  color: rgb(249, 248, 248);
+  
+  z-index: 0;
+}
+
+mark::before {
+  content: "";
+  position: absolute;
+  inset: -6px -10px -5px -10px;
+  border: 2px solid currentColor;
+  border-radius: 48% 52% 45% 55% / 55% 45% 52% 48%;
+  transform: rotate(-3deg);
+  z-index: -1;
+}
+
+mark::after {
+  content: "";
+  position: absolute;
+  inset: -4px -8px -6px -12px;
+  border: 1px solid currentColor;
+  border-radius: 52% 48% 55% 45% / 45% 55% 48% 52%;
+  transform: rotate(2deg);
+  opacity: 0.45;
+  z-index: -1;
+}
