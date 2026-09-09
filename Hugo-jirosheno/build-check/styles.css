@@ -1505,14 +1505,14 @@
   box-sizing: border-box;
 
   background: rgba(255, 255, 255, 0.025);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 101, 101, 0.062);
   border-radius: 10px;
 
   font-family: 'IBM Plex Mono', monospace;
 }
 
 .reader-header {
-  display: flex;
+  display: transparent;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
