@@ -167,3 +167,318 @@
   updateTimeline();
   window.addEventListener('beforeunload', () => audio.pause());
 })();
+
+
+
+
+
+
+/* =========================================
+   FLOATING READER
+   ========================================= */
+
+
+/*
+   Find the elements we need
+*/
+
+const audio = document.getElementById("article-audio");
+
+const coffeeButton =
+    document.getElementById("coffee-button");
+
+const controls =
+    document.getElementById("reader-controls");
+
+const closeButton =
+    document.getElementById("reader-close");
+
+const playButton =
+    document.getElementById("reader-play");
+
+const playIcon =
+    document.getElementById("reader-play-icon");
+
+const previousButton =
+    document.getElementById("reader-previous");
+
+const nextButton =
+    document.getElementById("reader-next");
+
+const speedButton =
+    document.getElementById("reader-speed");
+
+const progress =
+    document.getElementById("reader-progress");
+
+const currentTime =
+    document.getElementById("reader-current-time");
+
+const duration =
+    document.getElementById("reader-duration");
+
+
+
+/* =========================================
+   OPEN / CLOSE CONTROLS
+   ========================================= */
+
+coffeeButton.addEventListener("click", () => {
+
+    const isOpen =
+        controls.classList.toggle("open");
+
+    coffeeButton.setAttribute(
+        "aria-expanded",
+        isOpen
+    );
+
+});
+
+
+closeButton.addEventListener("click", () => {
+
+    controls.classList.remove("open");
+
+    coffeeButton.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+});
+
+
+
+/* =========================================
+   PLAY / PAUSE
+   ========================================= */
+
+playButton.addEventListener("click", () => {
+
+    if (audio.paused) {
+
+        audio.play();
+
+    } else {
+
+        audio.pause();
+
+    }
+
+});
+
+
+
+/* =========================================
+   UPDATE PLAY BUTTON
+   ========================================= */
+
+audio.addEventListener("play", () => {
+
+    playIcon.textContent = "Ⅱ";
+
+});
+
+
+audio.addEventListener("pause", () => {
+
+    playIcon.textContent = "▶";
+
+});
+
+
+audio.addEventListener("ended", () => {
+
+    playIcon.textContent = "▶";
+
+});
+
+
+
+/* =========================================
+   FORMAT TIME
+   ========================================= */
+
+function formatTime(seconds) {
+
+    if (!Number.isFinite(seconds)) {
+        return "0:00";
+    }
+
+    const minutes =
+        Math.floor(seconds / 60);
+
+    const remainingSeconds =
+        Math.floor(seconds % 60);
+
+    return (
+        minutes +
+        ":" +
+        String(remainingSeconds).padStart(2, "0")
+    );
+
+}
+
+
+
+/* =========================================
+   AUDIO METADATA
+   ========================================= */
+
+audio.addEventListener("loadedmetadata", () => {
+
+    duration.textContent =
+        formatTime(audio.duration);
+
+});
+
+
+
+/* =========================================
+   UPDATE PROGRESS
+   ========================================= */
+
+audio.addEventListener("timeupdate", () => {
+
+    if (!audio.duration) {
+        return;
+    }
+
+
+    const percentage =
+        (audio.currentTime / audio.duration) * 100;
+
+
+    progress.value = percentage;
+
+
+    currentTime.textContent =
+        formatTime(audio.currentTime);
+
+});
+
+
+
+/* =========================================
+   SEEK AUDIO
+   ========================================= */
+
+progress.addEventListener("input", () => {
+
+    if (!audio.duration) {
+        return;
+    }
+
+
+    const percentage =
+        Number(progress.value);
+
+
+    audio.currentTime =
+        (percentage / 100) * audio.duration;
+
+});
+
+
+
+/* =========================================
+   PLAYBACK SPEED
+   ========================================= */
+
+const speeds = [
+    1,
+    1.25,
+    1.5,
+    1.75,
+    2
+];
+
+
+let currentSpeedIndex = 0;
+
+
+speedButton.addEventListener("click", () => {
+
+    currentSpeedIndex++;
+
+
+    if (
+        currentSpeedIndex >=
+        speeds.length
+    ) {
+
+        currentSpeedIndex = 0;
+
+    }
+
+
+    const speed =
+        speeds[currentSpeedIndex];
+
+
+    audio.playbackRate = speed;
+
+
+    speedButton.textContent =
+        speed + "×";
+
+});
+
+
+
+/* =========================================
+   PREVIOUS / NEXT
+   ========================================= */
+
+
+/*
+   For now these buttons simply move
+   backward/forward by 10 seconds.
+
+   Later we can connect them to
+   article sections or chapters.
+*/
+
+
+previousButton.addEventListener("click", () => {
+
+    audio.currentTime =
+        Math.max(
+            0,
+            audio.currentTime - 10
+        );
+
+});
+
+
+nextButton.addEventListener("click", () => {
+
+    audio.currentTime =
+        Math.min(
+            audio.duration,
+            audio.currentTime + 10
+        );
+
+});
+
+
+
+/* =========================================
+   BACK TO TOP
+   ========================================= */
+
+const backToTop =
+    document.getElementById("back-to-top");
+
+
+backToTop.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
